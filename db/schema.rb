@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_20_193008) do
+ActiveRecord::Schema.define(version: 2020_06_20_212904) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_06_20_193008) do
     t.string "company_nickname"
     t.string "main_contact"
     t.string "main_contact_email"
-    t.string "type"
+    t.string "franchise_or_smb"
     t.boolean "has_global_db"
     t.boolean "has_memberships"
     t.boolean "has_migration"

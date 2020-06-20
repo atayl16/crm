@@ -1,0 +1,23 @@
+<%= simple_form_for @merchant do |f| %>
+
+  <%=  f.input :production_parent_mid %>
+  <%=  f.input :sandbox_parent_mid %>
+  <%=  f.input :company, label:"Company Name"%>
+  <%=  f.input :company_nickname %>
+  <%=  f.input :main_contact %>
+  <%=  f.input :main_contact_email %>
+  <%=  f.input :franchise_or_smb %>
+  <%=  f.check_box :has_global_db %>
+  <%=  f.check_box :has_memberships %>
+  <%=  f.check_box :has_migration %>
+  <%=  f.check_box :has_dedicated_infrastructure %>
+  <%=  f.check_box :has_enterprise_billing %>
+  <%=  f.input :notes %>
+  <%=  f.input :rollout_planner_link %>
+  <%=  f.input :project_plan_link %>
+  <%=  f.input :drive_folder_link %>
+  <%=  f.input :training %>
+
+   <%= f.submit 'Save' %>
+
+<% end %>
