@@ -1,7 +1,9 @@
 class MerchantsController < ApplicationController
   before_action :set_merchant, only: [:show]
+
 	def index
-	end
+    @merchants = Merchant.all
+  end
 
 	def new
 		@merchant = Merchant.new

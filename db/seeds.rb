@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+@user = User.create(email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "Jon", last_name: "Snow")
+puts "1 User created"
+
 100.times do |merchant|
   Merchant.create!(
     production_parent_mid: Faker::Number.number(digits: 6),
@@ -25,7 +28,8 @@ require 'faker'
     rollout_planner_link: Faker::Internet.url,
     project_plan_link: Faker::Internet.url,
     drive_folder_link: Faker::Internet.url,
-    training: Faker::Company.bs
+    training: Faker::Company.bs,
+    timezone: Faker::Address.time_zone
   )
 end
 
