@@ -13,7 +13,7 @@ class MerchantsController < ApplicationController
 		@merchant = Merchant.new(merchant_params)
 
 		if @merchant.save
-			redirect_to @merchant, notice: 'The merchant was created successfully'
+			redirect_to edit_merchant_path, notice: 'The merchant was created successfully'
 		else
 			render :new
 		end
@@ -27,7 +27,7 @@ class MerchantsController < ApplicationController
 
   def update
     if @merchant.update(merchant_params)
-      redirect_to @merchant, notice: 'The merchant was updated successfully'
+      redirect_to edit_merchant_path, notice: 'The merchant was updated successfully'
     else
       render :edit
     end
