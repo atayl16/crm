@@ -10,7 +10,7 @@ require 'faker'
 @user = User.create(email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "Jon", last_name: "Snow")
 puts "1 User created"
 
-100.times do |merchant|
+20.times do |merchant|
   Merchant.create!(
     production_parent_mid: Faker::Number.number(digits: 6),
     sandbox_parent_mid: Faker::Number.number(digits: 6),
@@ -29,8 +29,8 @@ puts "1 User created"
     project_plan_link: Faker::Internet.url,
     drive_folder_link: Faker::Internet.url,
     training: Faker::Company.bs,
-    timezone: Faker::Address.time_zone
+    timezone: "MST"
   )
 end
 
-puts "100 Merchants have been created"
+puts "20 Merchants have been created"

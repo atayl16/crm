@@ -9,5 +9,8 @@
     <td style ="word-break:break-all;"><%= merchant.rollout_planner_link%></td>
     <td style ="word-break:break-all;"><%= merchant.project_plan_link%></td>
     <td style ="word-break:break-all;"><%= merchant.drive_folder_link%></td>
+    <td><%= link_to 'View', merchant_path(merchant) %></td>
+    <td><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
+    <td><%= link_to 'Delete', merchant_path(merchant), method: :delete, id: "delete_merchant_#{merchant.id}_from_index", data: { confirm: 'Are you sure you want to delete this merchant? This cannot be undone!' } %></td>
   </tr>
 <% end %>
