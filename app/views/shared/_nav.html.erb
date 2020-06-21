@@ -7,6 +7,9 @@
 				<li class="nav-item">
 					<a class="nav-link <%= active?(new_merchant_path) %>" href="/merchants/new">New Merchant</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link <%= active?("/users") %>" href="/users">Users</a>
+				</li>
         <li class="nav-item dropdown ml-md-auto">
           <a class="nav-item" id="navbarDropdownMenuLink">
             <% if user_signed_in? %>

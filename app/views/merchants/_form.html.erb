@@ -1,22 +1,22 @@
 <%= simple_form_for @merchant do |f| %>
 
-  <%=  f.input :production_parent_mid %>
-  <%=  f.input :sandbox_parent_mid %>
+  <%=  f.input :production_parent_mid, label:"Production Parent Account MID"%>
+  <%=  f.input :sandbox_parent_mid, label:"Sandbox Parent Account MID" %>
   <%=  f.input :company, label:"Company Name"%>
-  <%=  f.input :company_nickname %>
-  <%=  f.input :main_contact %>
-  <%=  f.input :main_contact_email %>
-  <%=  f.input :franchise_or_smb %>
-  <%=  f.check_box :has_global_db, label:"Global DB" %>
-  <%=  f.check_box :has_memberships, label:"Memberships" %>
-  <%=  f.check_box :has_migration, label:"Data Migration" %>
-  <%=  f.check_box :has_dedicated_infrastructure, label:"Dedicated Infrastructure" %>
-  <%=  f.check_box :has_enterprise_billing, label:"Enterprise Billing" %>
-  <%=  f.input :notes %>
+  <%=  f.input :company_nickname, label:"Company Nickname" %>
+  <%=  f.input :main_contact, label:"Contact Name" %>
+  <%=  f.input :main_contact_email, label:"Contact Email" %>
+  <%=  f.input :franchise_or_smb, label:"Franchise or SMB" %>
+  <%=  f.input :has_global_db, as: :radio_buttons, label:"Global DB" %>
+  <%=  f.input :has_memberships, as: :radio_buttons, label:"Memberships" %>
+  <%=  f.input :has_migration, as: :radio_buttons, label:"Data Migration" %>
+  <%=  f.input :has_dedicated_infrastructure, as: :radio_buttons, label:"Dedicated Infrastructure" %>
+  <%=  f.input :has_enterprise_billing, as: :radio_buttons, label:"Enterprise Billing" %>
+  <%=  f.input :notes, label:"Notes" %>
   <%=  f.input :rollout_planner_link %>
   <%=  f.input :project_plan_link %>
   <%=  f.input :drive_folder_link %>
-  <%=  f.input :training %>
+  <%=  f.input :training, label:"Training Requirements" %>
   <%=  f.input :timezone %>
 
   <%= f.submit 'Save' %>
