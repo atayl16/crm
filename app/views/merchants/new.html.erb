@@ -7,11 +7,11 @@
   <%=  f.input :main_contact %>
   <%=  f.input :main_contact_email %>
   <%=  f.input :franchise_or_smb %>
-  <%=  f.check_box :has_global_db %>
-  <%=  f.check_box :has_memberships %>
-  <%=  f.check_box :has_migration %>
-  <%=  f.check_box :has_dedicated_infrastructure %>
-  <%=  f.check_box :has_enterprise_billing %>
+  <%=  f.check_box :has_global_db, label:"Global DB" %>
+  <%=  f.check_box :has_memberships, label:"Memberships" %>
+  <%=  f.check_box :has_migration, label:"Data Migration" %>
+  <%=  f.check_box :has_dedicated_infrastructure, label:"Dedicated Infrastructure" %>
+  <%=  f.check_box :has_enterprise_billing, label:"Enterprise Billing" %>
   <%=  f.input :notes %>
   <%=  f.input :rollout_planner_link %>
   <%=  f.input :project_plan_link %>
