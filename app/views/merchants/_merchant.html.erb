@@ -5,10 +5,9 @@
     <td style ="word-break:break-all;"><%= merchant.sandbox_parent_mid%></td>
     <td style ="word-break:break-all;"><%= merchant.timezone%></td>
     <td style ="word-break:break-all;"><%= merchant.main_contact%></td>
-    <td style ="word-break:break-all;"><%= merchant.main_contact_email%></td>
-    <td style ="word-break:break-all;"><%= merchant.rollout_planner_link%></td>
-    <td style ="word-break:break-all;"><%= merchant.project_plan_link%></td>
-    <td style ="word-break:break-all;"><%= merchant.drive_folder_link%></td>
+    <td> <%= link_to 'Rollout', "https://#{merchant.rollout_planner_link}"  %></td>
+    <td> <%= link_to 'Project', "https://#{merchant.project_plan_link}"  %></td>
+    <td> <%= link_to 'Folder', "https://#{merchant.drive_folder_link}"  %></td>
     <td><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
     <td><%= link_to 'Delete', merchant_path(merchant), method: :delete, id: "delete_merchant_#{merchant.id}_from_index", data: { confirm: 'Are you sure you want to delete this merchant? This cannot be undone!' } %></td>
   </tr>
