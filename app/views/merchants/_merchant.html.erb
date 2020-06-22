@@ -1,10 +1,10 @@
 <% @merchants.each do |merchant| %>
   <tr>
-    <td style ="word-break:break-all;"><%= merchant.company%></td>
-    <td style ="word-break:break-all;"><%= merchant.production_parent_mid%></td>
-    <td style ="word-break:break-all;"><%= merchant.sandbox_parent_mid%></td>
-    <td style ="word-break:break-all;"><%= merchant.timezone%></td>
-    <td style ="word-break:break-all;"><%= merchant.main_contact%></td>
+    <td style ="word-wrap:break-word;"><%= merchant.company%></td>
+    <td style ="word-wrap:break-word;"><%= merchant.production_parent_mid%></td>
+    <td style ="word-wrap:break-word;"><%= merchant.sandbox_parent_mid%></td>
+    <td style ="word-wrap:break-word;"><%= merchant.timezone%></td>
+    <td style ="word-wrap:break-word;"><%= merchant.main_contact%></td>
     <td> <%= link_to 'Rollout', "https://#{merchant.rollout_planner_link}"  %></td>
     <td> <%= link_to 'Project', "https://#{merchant.project_plan_link}"  %></td>
     <td> <%= link_to 'Folder', "https://#{merchant.drive_folder_link}"  %></td>
