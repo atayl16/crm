@@ -17,6 +17,7 @@ gem 'omniauth-google-oauth2'
 gem 'bootstrap', '~> 4.0'
 gem 'simple_form'
 gem 'jquery-rails'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

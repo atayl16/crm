@@ -8,7 +8,12 @@
     <td> <%= link_to 'Rollout', "https://#{merchant.rollout_planner_link}"  %></td>
     <td> <%= link_to 'Project', "https://#{merchant.project_plan_link}"  %></td>
     <td> <%= link_to 'Folder', "https://#{merchant.drive_folder_link}"  %></td>
-    <td><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
-    <td><%= link_to 'Delete', merchant_path(merchant), method: :delete, id: "delete_merchant_#{merchant.id}_from_index", data: { confirm: 'Are you sure you want to delete this merchant? This cannot be undone!' } %></td>
+    <td><%= link_to edit_merchant_path(merchant) do %>
+      <span class="fa fa-edit"></span>
+      <% end %>            <%= link_to merchant_path(merchant), method: :delete, id: "delete_merchant_#{merchant.id}_from_index", data: { confirm: 'Are you sure you want to delete this merchant? This cannot be undone!' } do %>
+      <span class="fa fa-trash">
+      </span>
+      <% end %>
+    </td>
   </tr>
 <% end %>
